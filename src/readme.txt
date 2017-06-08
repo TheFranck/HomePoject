@@ -1,6 +1,5 @@
-Ressource : Bootstrap 4, google fonts, icomoon, font awesome
+Ressource : google fonts, icomoon, font awesome
 
-Pour le menu, j'ai utilisé bootstrap
 
 Fonctionnalités : 
 	

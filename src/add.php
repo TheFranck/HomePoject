@@ -8,50 +8,50 @@ require_once("function/baseFunction.php");
    
 ?>
 
-<div id="formulaire">
+<section id="add">
+			<div class="row container-add">
+				<h2>Choississez vos différentes options</h2>
 
-<form action="function/insert.php" method="post">
-    <label for="taille">Choississez la taille de votre canard : </label>
-     <select name="taille" required="true">
-           <?php 
-                foreach ($tailles as $value) {
-                    echo " <option value='". $value['id'] . "'>". $value['taille'] . "</option> "; // ici on creer une liste déroulante pour selectionner la taille
-                }
-            ?>
-    </select> 
+                    <form action="function/insert.php" method="post">
+                        <label for="taille">Choississez la taille de votre canard : </label>
+                        <select name="taille" required="true">
+                            <?php 
+                                    foreach ($tailles as $value) {
+                                        echo " <option value='". $value['id'] . "'>". $value['taille'] . "</option> ";
+                                    }
+                                ?>
+                        </select> 
 
-    <label for="couleur">Choississez la couleur de votre canard : </label>
-    <select name="couleur" required="true">
-           <?php 
-                foreach ($colors as $value) {
-                    echo " <option value='". $value['id'] . "'>". $value['couleur'] . "</option> "; // ici on creer une liste déroulante pour selectionner les couleurs
-                }
-            ?>
-    </select> 
+                        <label for="couleur">Choississez la couleur de votre canard : </label>
+                        <select name="couleur" required="true">
+                            <?php 
+                                    foreach ($colors as $value) {
+                                        echo " <option value='". $value['id'] . "'>". $value['couleur'] . "</option> "; 
+                                    }
+                                ?>
+                        </select> 
 
-    <label for="material">Choississez la matière de votre canard : </label>
-    <!--<input type="text" name="editeur" id="editor">-->
+                        <label for="material">Choississez la matière de votre canard : </label>
+                        <select name="material" required="true">
+                            <?php 
+                                    foreach ($materials as $value) {
+                                        echo " <option value='". $value['id'] . "'>". $value['material'] . "</option> "; 
+                                    }
+                                ?>
+                        </select> 
 
-    <select name="material" required="true">
-           <?php 
-                foreach ($materials as $value) {
-                    echo " <option value='". $value['id'] . "'>". $value['material'] . "</option> "; // ici on creer une liste déroulante pour selectionner la matiere
-                }
-            ?>
-    </select> 
-    <label for="">Choississez Votre ou vos accessoires :</label>
-    <select name="accessory[]" multiple>
-        <?php 
-            foreach ($accessories as $value) {
-                echo " <option value='". $value['id'] . "'>". $value['accessory'] . "</option> "; // ici on creer une liste déroulante pour selectionner le ou les accessoires
-            }
-            ?>
-    </select>
-    
-    <input class="btn" type="submit" value="Ajouter">
+                        <label for="accessory">Choississez votre accessoire :</label>
+                        <select name="accessory" required="true">
+                            <?php 
+                                foreach ($accessories as $value) {
+                                    echo " <option value='". $value['id'] . "'>". $value['name_accessory'] . "</option> ";
+                                } 
+                                ?>
+                        </select>
+                        
+                        <input class="btn" type="submit" value="Ajouter">
+                    </form>
+        </div>	
+</section>
 
-    </div>
-
-    </body>
-      
-    </html>
+<?php require_once("template/footer.php"); ?>

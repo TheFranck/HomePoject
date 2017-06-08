@@ -1,126 +1,188 @@
 body {
-    font-family: 'Open Sans', sans-serif;
-    background-color: #f3f3f3;
     margin: 0;
     padding: 0;
-    /*display: flex;
-    flex-direction: column;
-    justify-content: center;*/
+    background-color:lightyellow;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    width: 1140px;
+    margin: 0 auto;
+    padding: 0.625em 0.625em;
+    justify-content: space-between;
+}
+
+h1 {
+    margin: 0px;
+}
+
+
+h2 {
+    text-transform: uppercase;
+    font-weight: 600;
+    color:#80551b;
+
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    align-content: space-around;
+}
+
+ul li  {
+    margin-right: 10px;
+    padding-left: 10px; 
+    text-transform: uppercase;
+    text-decoration: none;      
+}
+
+a {
+    color: #456fe6;
+    text-decoration: none; 
+}
+
+a:hover,
+a:focus,
+a:active {
+    text-decoration: none;
+    color: #80551b;
+}
+
+header{
+
+    background-color: yellow;
 }
 
 .menu {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    align-items: center;
     background: yellow;
     padding: 10px 30px;
 }
 
-h1 {
-    text-transform: uppercase;
+/*------------- LOGIN ------------*/
+
+#login {
+    margin-top: 6.25em;
+    margin-bottom: 10em;
 }
 
- h1 a {
-     text-decoration: none;
-     color: darkslateblue;
- }
-
- nav ul {
-     display: flex;
-     flex-direction: row;
-     align-content: center;
-     list-style: none;     
- }
-
-ul li {
-    padding: 20px;
-    text-transform: uppercase;
-    
-}
-
-ul li a {
-    text-decoration: none;
-    color: darkblue;
-}
-
-section {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 90%;
-    height: 50%;
-    margin-top: 100px;
-    padding: 10px 20px;
-}
-
-.presentation {
+.container-login {
     display: flex;
     flex-direction: column;
-    align-content: center;
-    width: 70%;
+    justify-content: center;
+    align-items: center;
 }
 
- img {
-    width: 30%;
-    height: 10%;
+.container-login form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    margin-bottom: 5em;
+    flex-wrap: wrap;
+} 
+
+.container-login label {   
+    padding: 1em 1em;
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+ .container-login input {
+    text-align: center;
+    font-size: 20px;
+}
+
+/*---------------- accueil------------------*/
+
+#accueil {
+    margin-top: 6.25em;
+    margin-bottom: 12em;
+    flex-wrap: wrap;
+}
+
+.presentation-text {
+    margin-right: 1em;
+}
+#accueil img {
+    width: 25%;
+}
+
+.container-presentation{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    
 }
 
 .btn {
     text-align: center;
     background-color: greenyellow;
     padding: 20px;
-    width: 20%;
     margin-top: 50px;
+    border-radius: 30px;
+}
+/* ------------- FORMULAIRE --------------*/
+
+
+#add {
+    margin-top: 6.25em;
+    margin-bottom: 12em;
 }
 
-footer {
-    background-color: lightseagreen;
-    margin-top: 30px;
-    text-align: center;
-    padding: 30px;
-}
-
-/*-------------------------------------*/
-
-body {
+.container-add{
     display: flex;
     flex-direction: column;
-    align-content: center;
-    justify-content: center;
-    margin: 0;
-    padding: 0;
-    background-color: #fefefe;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    align-items: center;
 }
 
-header{
-    background-color: yellow;
-}
-
-ul{   
+form {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
-    list-style: none;    
+    align-content: center;
+    text-align: center;
+} 
+
+label {   
+    padding: 1em 1em;
+    font-size: 20px;
+    margin: 10px 0;
 }
 
-li {
-    padding: 10px;
-    text-transform: uppercase;
-    font-size:20px;
-    text-align: center; 
-    margin-left: 20px;
-
+ .container-add input {
+    margin: 1em 0;
+    text-align: center;
+    font-size: 20px;
 }
 
-ul li a{
-   color:#666;
-    text-decoration: none;
+select {
+  width: 100%;
+  padding:.5em;
+  text-align: center;
+  font-size: 20px;
 }
 
-ul li:last-child {
-    margin-right: 20px;
+.connect {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 10em auto;
 }
+
+.log {
+    text-align: center;
+}*/
 
 #tableau {
     display: flex;
@@ -148,17 +210,15 @@ td {
      border: 1px solid #999;
 }
 
-tr:nth-child(even) {
-    background-color: lightsalmon;
-}
-tr:nth-child(odd) {
-    background-color: lightskyblue;
+
+/*-------------FOOTER -------------*/ 
+
+
+footer {
+    background-color: lightseagreen;
+    margin-top: 30px;
+    text-align: center;
+    padding: 30px;
 }
 
-#formulaire {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-content: center;
-    
-} 
+/* ----------- MEDIA QUERIES ---------------*/

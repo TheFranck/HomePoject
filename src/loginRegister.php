@@ -1,4 +1,4 @@
-<?php require_once("template/head.php"); ?>
+<?php ?>
 
 <!-- A STYLER -->
 <!DOCTYPE html>
@@ -12,27 +12,37 @@
         <title>Le Coin du Canards</title>
     </head>
 <body>
-    <h2>Connexion à votre compte</h2>
-        <form method="post" action="function/login.php">
-            <label for="user">Votre identifiant :</label>
-            <input type="text" name="username" id="user" value="" required="true">
+<header>
+    <div class="menu"> 
+        <h1>
+            <a href="index.php">Le Coin du Canards</a>
+        </h1>
+    </div>
+</header>
 
-            <label for="mpd">Votre mot de passe : </label>
-            <input type="password" name="password" value="" id="mpd" required="true">
+<section id="login">
+			<div class="row container-login">
+				 <h2>Connexion à votre compte</h2>
+                    <form method="post" action="function/login.php" class="log">
+                        <label for="user">Votre identifiant :</label>
+                        <input type="text" name="username" id="user" value="" required="true">
 
-            <input type="submit" name="" value="Se connecter">
-        </form>
+                        <label for="mpd">Votre mot de passe : </label>
+                        <input type="password" name="password" value="" id="mpd" required="true">
 
+                        <input class="btn" type="submit" name="" value="Se connecter">
+                    </form>
+                <h2>Créer un nouveau compte</h2>
+                    <form method="post" action ="function/register.php" class="regist">
+                        <label for="newUser">Tapez votre nouvel identifiant :</label>
+                        <input id="newUser" type="text" name="newUsername" value="">
 
-        <h2>Créer un nouveau compte</h2>
-        <form method="post" action ="function/register.php">
-            <label for="newUser">Votre identifiant :</label>
-            <input id="newUser" type="text" name="newUsername" value="">
+                        <label for="newMpd">Tapez votre nouveau mot de passe : </label>
+                        <input type="password" name="NewPassword" value="" id="newMpd" required="true">
 
-            <label for="newMpd">Votre mot de passe : </label>
-            <input type="password" name="NewPassword" value="" id="newMpd" required="true">
+                        <input class="btn" type="submit" name="" value="Créer un nouveau compte">
+                    </form>
+            </div>
+	</section>
 
-            <input type="submit" name="" value="Créer un nouveau compte">
-        </form>
-</body>
-</html>
+<?php require_once("template/footer.php"); ?>
