@@ -55,8 +55,9 @@ $db = new PDO('mysql:host=localhost;dbname=ducks', 'root','0000');
 $newDuck = $db->prepare('INSERT INTO canard (taille, couleur, matiere, accessoire) VALUES (:taille, :couleur, :matiere, :accessoire)'); 
 $newDuck->bindParam(':taille',$_POST['taille']);
 $newDuck->bindParam(':couleur',$_POST['couleur']);
-$newDuck->bindParam(':matiere',$_POST['material']);
-$newDuck->bindParam(':accessoire',$_POST['name_accessory']);
+$newDuck->bindParam(':matiere',$_POST['matiere']);
+$newDuck->bindParam(':accessoire',$_POST['accessoire']);
 $newDuck->execute();
 }
+
 ?>

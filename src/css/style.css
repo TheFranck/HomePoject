@@ -54,6 +54,9 @@ a:active {
     color: #80551b;
 }
 
+.btn:hover {
+    background: lightblue;
+}
 header{
 
     background-color: yellow;
@@ -61,7 +64,7 @@ header{
 
 .menu {
     display: flex;
-    flex-direction: row;
+    flex-flow: row wrap;
     justify-content: space-around;
     align-items: center;
     background: yellow;
@@ -71,6 +74,8 @@ header{
 /*------------- LOGIN ------------*/
 
 #login {
+    display: flex;
+    flex-flow: row wrap;
     margin-top: 6.25em;
     margin-bottom: 10em;
 }
@@ -106,9 +111,10 @@ header{
 /*---------------- accueil------------------*/
 
 #accueil {
+    display: flex;
     margin-top: 6.25em;
     margin-bottom: 12em;
-    flex-wrap: wrap;
+    flex-flow: row wrap;
 }
 
 .presentation-text {
@@ -131,11 +137,14 @@ header{
     padding: 20px;
     margin-top: 50px;
     border-radius: 30px;
+    width: 50%;
 }
 /* ------------- FORMULAIRE --------------*/
 
 
 #add {
+    display: flex;
+     flex-flow: row wrap;
     margin-top: 6.25em;
     margin-bottom: 12em;
 }
@@ -173,34 +182,31 @@ select {
   font-size: 20px;
 }
 
-.connect {
+/*------------ LISTE --------*/
+
+.liste {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin: 10em auto;
-}
-
-.log {
+    flex-flow: column wrap;
     text-align: center;
-}*/
-
+}
 #tableau {
     display: flex;
-    flex-direction: row;
+    flex-flow: row wrap;
     justify-content: center;
-    align-content: center;
     
 }
 
 table {  
+    display: flex;
+    flex-flow: row wrap;
     text-align: center;
     margin: 20px;
 }
 
 th {
  text-transform: uppercase;
- border: 3px solid #111;
- background-color: lightseagreen;
+ border: 1px solid #111;
+ background-color: lemonchiffon;
  padding: 10px 60px;
 
 }
@@ -222,3 +228,15 @@ footer {
 }
 
 /* ----------- MEDIA QUERIES ---------------*/
+
+@media (max-width: 650px) {
+    .menu ul {
+        display:none;     
+    }
+}
+
+@media (max-width : 925px) {
+    #accueil img {
+        display: none;       
+    }
+}
