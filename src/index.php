@@ -33,3 +33,5 @@ require_once("function/baseFunction.php");
 
 
  <?php require_once("template/footer.php"); ?>
+
+INSERT INTO `ducks`.`canard` (`taillle`, `couleur`, `accessoire`, `matiere`) VALUES ('XS', 'Vert', 'Tetine', 'Latex');

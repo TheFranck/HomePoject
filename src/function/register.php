@@ -1,6 +1,5 @@
 <?php 
 $db = new PDO('mysql:host=localhost;dbname=ducks', 'root','0000');
-
 $utilisateurs = $db->prepare('SELECT * FROM ducks.user WHERE username = :username'); 
 $utilisateurs->bindParam(':username', $_POST['username']);
 $utilisateurs->execute();
