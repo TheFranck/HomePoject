@@ -157,6 +157,19 @@ header{
     width: 100%;
 }
 
+.btn-list {
+    text-align: center;
+    background-color: greenyellow;
+    padding: 20px;
+    margin-top: 50px;
+    border-radius: 30px;
+    width: 50%;
+    text-transform: uppercase;
+}
+
+.btn-list:hover {
+    background: lightblue;
+}
 .btn-register:hover {
     background: lightblue;
 }
@@ -247,6 +260,7 @@ footer {
     text-align: center;
     padding: 30px;
 }
+
 
 /* ----------- MEDIA QUERIES ---------------*/
 

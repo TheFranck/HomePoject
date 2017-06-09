@@ -1,7 +1,8 @@
 <?php     
 require_once("template/head.php");
 require_once("function/baseFunction.php");
-$newDuck = getAllItems();
+insertDuck($_POST);
+$duck = getAllItems(); 
 
 ?>
 
@@ -17,22 +18,21 @@ $newDuck = getAllItems();
         </tr>    
           <?php 
 
-              foreach ($newDuck as $key => $value) {
-                  
+              foreach ($duck as $value) { 
                   echo "<tr>";
                   echo "<td>" . $value['taille'] . "</td>" ;
                   echo "<td> " . $value['couleur'] . "</td> "  ;
                   echo "<td> " . $value['material'] . "</td> "  ;
                   echo "<td> " . $value['name_accessory'] . "</td> "  ;
                   echo "</tr>";
-                  
                   };
           ?>
       </table>
+      <div class="btn-list">
+        <a href="add.php">Modifier vos options</a>
+      </div>
   </div>
 
 </div>
 
 <?php require_once("template/footer.php"); ?>
-
-            var_dump($_POST);die;

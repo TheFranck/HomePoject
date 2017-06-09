@@ -18,8 +18,10 @@ Fonctionnalités :
 3ème difficulté : Un énorme problème pour insérer les choix de l'utilisateur de son canard personnel dans une autre page contenant un tableau récapitulatif. 
 		  Rien ne s'affiche dans le tableau.
 		  Mais si on tape dans la base de données, les options choisie, ces dernières s'affiche sans problème dans la liste.
+		  
+                  Je recherche toujours ce qui ne va pas sans succès, en recréant des tables
 
-		  Bloquant à cette étape, j'ai décidé de m'attaquer au HTML et le CSS des pages.
+		  Bloquant à cette étape, j'ai décidé de m'attaquer au HTML et le CSS des pages. 
 
 	
 	

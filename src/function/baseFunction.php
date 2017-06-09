@@ -4,12 +4,24 @@ function getAllItems()
 {
 $db = new PDO('mysql:host=localhost;dbname=ducks', 'root','0000');
 
-$canards = $db->prepare(' SELECT canard.id, couleur.couleur as couleur, accessory.name_accessory as accessoire, material.material as matiere, taille.taille as taille  
-FROM ducks.canard, ducks.taille, ducks.accessory, ducks.material, ducks.couleur 
-WHERE canard.id_taille = taille.id  
-AND canard.id_accessoire = accessory.id  
-AND canard.id_matiere = material.id  
-AND canard.id_couleur = couleur.id');
+$canards = $db->prepare('SELECT 
+    canard.id,
+    id_couleur AS couleur,
+   id_accessoire AS accessoire,
+    id_matiere AS matiere,
+    id_taille AS taille
+FROM
+    ducks.canard,
+    tailles,
+    accessory,
+    material,
+    colors
+WHERE
+    canard.id_couleur = colors.id
+AND canard.id_accessoire = accessory.id
+AND canard.id_matiere = material.id
+AND canard.id_couleur = colors.id;');
+
 $canards->execute();
 return $canards->fetchAll();
 
@@ -39,8 +51,6 @@ $colors->execute();
 return $colors->fetchAll();
 }
 
-
-
 function getAllMaterial()
 {
 $db = new PDO('mysql:host=localhost;dbname=ducks', 'root','0000');
@@ -51,7 +61,6 @@ return $materials->fetchAll();
 
 function insertDuck()
 {
-    
 $db = new PDO('mysql:host=localhost;dbname=ducks', 'root','0000');
 $newDuck = $db->prepare('INSERT INTO canard (taille, couleur, matiere, accessoire) VALUES (:taille, :couleur, :matiere, :accessoire)'); 
 $newDuck->bindParam(':taille',$_POST['taille']);
@@ -59,8 +68,5 @@ $newDuck->bindParam(':couleur',$_POST['couleur']);
 $newDuck->bindParam(':matiere',$_POST['material']);
 $newDuck->bindParam(':accessoire',$_POST['name_accessory']);
 $newDuck->execute();
-return $newDuck->fetchAll();
 }
-
-
 ?>
